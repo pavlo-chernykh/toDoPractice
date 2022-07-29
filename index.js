@@ -77,25 +77,6 @@ class ToDoModel {
     })
   }
 
-
-  // add(toDoName, toDoText) {
-  //   const isUnique = this.checkUnique(toDoName, toDoText);
-  //   if (isUnique) {
-  //     const toDoModelCard = {
-  //       toDoName,
-  //       toDoText
-  //     };
-  //     this.list.push(toDoModelCard);
-  //   }
-  // }
-  remove(id) {
-    this.list = this.list.filter(({toDoName}) => toDoName !== id);
-  }
-  checkUnique(toDoName, toDoText) {
-    return !this.list.find(toDoNameNoShd => toDoNameNoShd.toDoName === toDoName || toDoNameNoShd.toDoText === toDoText);
-  }
-}
-
 for (const key in ToDoModel) {
   Object.defineProperty(ToDoModel, key, {
     configurable: false
